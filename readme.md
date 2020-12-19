@@ -8,6 +8,13 @@
 
 Клонировать репозиторий локально:
 
+[RU]
+```sh
+git clone https://github.com/inertiajs-ru/pingcrm.git pingcrm
+cd pingcrm
+```
+
+[EN]
 ```sh
 git clone https://github.com/inertiajs/pingcrm.git pingcrm
 cd pingcrm
