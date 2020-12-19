@@ -1,27 +1,27 @@
 <template>
   <div>
-    <h1 class="mb-8 font-bold text-3xl">Contacts</h1>
+    <h1 class="mb-8 font-bold text-3xl">Контакты</h1>
     <div class="mb-6 flex justify-between items-center">
       <search-filter v-model="form.search" class="w-full max-w-md mr-4" @reset="reset">
-        <label class="block text-gray-700">Trashed:</label>
+        <label class="block text-gray-700">Удаленные:</label>
         <select v-model="form.trashed" class="mt-1 w-full form-select">
           <option :value="null" />
-          <option value="with">With Trashed</option>
-          <option value="only">Only Trashed</option>
+          <option value="with">С удаленными</option>
+          <option value="only">Только удаленные</option>
         </select>
       </search-filter>
       <inertia-link class="btn-indigo" :href="route('contacts.create')">
-        <span>Create</span>
-        <span class="hidden md:inline">Contact</span>
+        <span>Создать</span>
+        <span class="hidden md:inline">Контакт</span>
       </inertia-link>
     </div>
     <div class="bg-white rounded shadow overflow-x-auto">
       <table class="w-full whitespace-no-wrap">
         <tr class="text-left font-bold">
-          <th class="px-6 pt-6 pb-4">Name</th>
-          <th class="px-6 pt-6 pb-4">Organization</th>
-          <th class="px-6 pt-6 pb-4">City</th>
-          <th class="px-6 pt-6 pb-4" colspan="2">Phone</th>
+          <th class="px-6 pt-6 pb-4">Имя</th>
+          <th class="px-6 pt-6 pb-4">Организация</th>
+          <th class="px-6 pt-6 pb-4">Город</th>
+          <th class="px-6 pt-6 pb-4" colspan="2">Телефон</th>
         </tr>
         <tr v-for="contact in contacts.data" :key="contact.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
           <td class="border-t">
@@ -54,7 +54,7 @@
           </td>
         </tr>
         <tr v-if="contacts.data.length === 0">
-          <td class="border-t px-6 py-4" colspan="4">No contacts found.</td>
+          <td class="border-t px-6 py-4" colspan="4">Контактов не найдено.</td>
         </tr>
       </table>
     </div>
@@ -72,7 +72,7 @@ import SearchFilter from '@/Shared/SearchFilter'
 import throttle from 'lodash/throttle'
 
 export default {
-  metaInfo: { title: 'Contacts' },
+  metaInfo: { title: 'Контакты' },
   layout: Layout,
   components: {
     Icon,
