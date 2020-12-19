@@ -6,15 +6,15 @@
 
 ## Установка
 
-Клонировать репозиторий локально:
+Клонировать репозиторий локально RU или EN:
 
-[RU]
+- RU
 ```sh
 git clone https://github.com/inertiajs-ru/pingcrm.git pingcrm
 cd pingcrm
 ```
 
-[EN]
+- EN
 ```sh
 git clone https://github.com/inertiajs/pingcrm.git pingcrm
 cd pingcrm
