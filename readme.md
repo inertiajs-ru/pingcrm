@@ -1,80 +1,80 @@
 # Ping CRM
 
-A demo application to illustrate how Inertia.js works.
+Демо-приложение, демонстрирующее, как работает Inertia.js.
 
 ![](https://raw.githubusercontent.com/inertiajs/pingcrm/master/screenshot.png)
 
-## Installation
+## Установка
 
-Clone the repo locally:
+Клонировать репозиторий локально:
 
 ```sh
 git clone https://github.com/inertiajs/pingcrm.git pingcrm
 cd pingcrm
 ```
 
-Install PHP dependencies:
+Установить зависимости PHP:
 
 ```sh
 composer install
 ```
 
-Install NPM dependencies:
+Установить зависимости NPM:
 
 ```sh
 npm ci
 ```
 
-Build assets:
+Сборка асетов:
 
 ```sh
 npm run dev
 ```
 
-Setup configuration:
+Установка конфигурации:
 
 ```sh
 cp .env.example .env
 ```
 
-Generate application key:
+Сгенерировать ключ приложения:
 
 ```sh
 php artisan key:generate
 ```
 
-Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
+Создайте базу данных SQLite. Вы также можете использовать другую базу данных (MySQL, Postgres), просто обновите свою конфигурацию соответствующим образом.
 
 ```sh
 touch database/database.sqlite
 ```
 
-Run database migrations:
+Запустить миграцию базы данных:
 
 ```sh
 php artisan migrate
 ```
 
-Run database seeder:
+Запустить заполнение данными (сиды) базы данных:
 
 ```sh
 php artisan db:seed
 ```
 
-Run the dev server (the output will give the address):
+Запустите сервер разработки (в выводе будет указан адрес):
 
 ```sh
 php artisan serve
 ```
 
-You're ready to go! Visit Ping CRM in your browser, and login with:
+Вы готовы к работе! Посетите Ping CRM в своем браузере и войдите с помощью:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
 
-## Running tests
+## Запуск тестов
 
-To run the Ping CRM tests, run:
+Чтобы запустить тесты Ping CRM, запустите:
 
 ```
 phpunit
