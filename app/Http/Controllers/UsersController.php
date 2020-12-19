@@ -101,7 +101,7 @@ class UsersController extends Controller
             $user->update(['password' => Request::get('password')]);
         }
 
-        return Redirect::back()->with('success', 'User updated.');
+        return Redirect::back()->with('success', 'Пользователь обновлен.');
     }
 
     public function destroy(User $user)
