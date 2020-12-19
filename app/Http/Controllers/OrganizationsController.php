@@ -42,7 +42,7 @@ class OrganizationsController extends Controller
             ])
         );
 
-        return Redirect::route('organizations')->with('success', 'Organization created.');
+        return Redirect::route('organizations')->with('success', 'Организация создана.');
     }
 
     public function edit(Organization $organization)
@@ -79,20 +79,20 @@ class OrganizationsController extends Controller
             ])
         );
 
-        return Redirect::back()->with('success', 'Organization updated.');
+        return Redirect::back()->with('success', 'Организация обновлена.');
     }
 
     public function destroy(Organization $organization)
     {
         $organization->delete();
 
-        return Redirect::back()->with('success', 'Organization deleted.');
+        return Redirect::back()->with('success', 'Организация удалена.');
     }
 
     public function restore(Organization $organization)
     {
         $organization->restore();
 
-        return Redirect::back()->with('success', 'Organization restored.');
+        return Redirect::back()->with('success', 'Организация восстановлена.');
     }
 }

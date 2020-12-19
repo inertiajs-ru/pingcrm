@@ -58,7 +58,7 @@ class UsersController extends Controller
             'photo_path' => Request::file('photo') ? Request::file('photo')->store('users') : null,
         ]);
 
-        return Redirect::route('users')->with('success', 'User created.');
+        return Redirect::route('users')->with('success', 'Пользователь создан.');
     }
 
     public function edit(User $user)
@@ -79,7 +79,7 @@ class UsersController extends Controller
     public function update(User $user)
     {
         if (App::environment('demo') && $user->isDemoUser()) {
-            return Redirect::back()->with('error', 'Updating the demo user is not allowed.');
+            return Redirect::back()->with('error', 'Обновление демо-пользователя запрещено.');
         }
 
         Request::validate([
@@ -107,18 +107,18 @@ class UsersController extends Controller
     public function destroy(User $user)
     {
         if (App::environment('demo') && $user->isDemoUser()) {
-            return Redirect::back()->with('error', 'Deleting the demo user is not allowed.');
+            return Redirect::back()->with('error', 'Удаление демо-пользователя запрещено.');
         }
 
         $user->delete();
 
-        return Redirect::back()->with('success', 'User deleted.');
+        return Redirect::back()->with('success', 'Пользователь удален.');
     }
 
     public function restore(User $user)
     {
         $user->restore();
 
-        return Redirect::back()->with('success', 'User restored.');
+        return Redirect::back()->with('success', 'Пользователь восстановлен.');
     }
 }
